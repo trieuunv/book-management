@@ -1,0 +1,36 @@
+<h1>Thêm Sách Mới</h1>
+
+<form method="POST" action="/books">
+  <p>
+    <label>Mã sản phẩm (bắt đầu bằng <b>286</b>):</label><br />
+    <input
+      type="text"
+      name="maSP"
+      required
+      placeholder="286SP01"
+      pattern="286.*"
+      title="Mã phải bắt đầu bằng 286"
+    />
+  </p>
+
+  <p>
+    <label>Tên sách:</label><br />
+    <input
+      type="text"
+      name="tenSach"
+      required
+      placeholder="Lập trình Node.js"
+    />
+  </p>
+
+  <p>
+    <label>Giá gốc (VNĐ):</label><br />
+    <input type="number" name="giaGoc" required min="0" placeholder="100000" />
+  </p>
+
+  <button type="submit">Lưu</button>
+</form>
+
+<p>
+  <a href="/">Quay lại danh sách</a>
+</p>
