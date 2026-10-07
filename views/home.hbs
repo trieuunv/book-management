@@ -1,0 +1,33 @@
+<h1>Danh sách Sách</h1>
+
+<p>
+  <a href="/books/add">Thêm sách mới</a>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Mã SP</th>
+      <th>Tên sách</th>
+      <th>Giá gốc (VNĐ)</th>
+      <th>Giá sau thuế (VNĐ)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each books}}
+      <tr>
+        <td>{{@index}}</td>
+        <td>{{this.maSP}}</td>
+        <td>{{this.tenSach}}</td>
+        <td>{{this.giaGoc}}</td>
+        <td>{{this.giaSauThue}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td colspan="5" style="text-align:center;">Chưa có sách nào trong hệ
+          thống</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
